@@ -29,7 +29,7 @@
 
 */
 
-prog_char inquire_ret[]="avr-cobalt-panel\r\n";
+const prog_char inquire_ret[]="avr-cobalt-panel\r\n";
 
 static uint8_t hex_nibble(char c){
 	if(c >= '0' && c <= '9')
