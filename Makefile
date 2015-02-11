@@ -1,8 +1,8 @@
 DEVICE_CC = atmega328p
-DEVICE_DUDE = m328p
+DEVICE_DUDE = ATMEGA328P
 
 # PROGRAMMER_DUDE = -Pusb -c dragon_isp
-PROGRAMMER_DUDE = -P/dev/ttyUSB0 -c stk500v1 -b 57600
+PROGRAMMER_DUDE = -P /dev/ttyACM0 -c arduino -b 115200
 
 AVRDUDE=avrdude
 OBJCOPY=avr-objcopy
@@ -12,7 +12,7 @@ LD=avr-gcc
 
 LDFLAGS=-Wall -g -mmcu=$(DEVICE_CC)
 CPPFLAGS=
-CFLAGS=-mmcu=$(DEVICE_CC) -Os -Wall -g -DF_CPU=16000000UL
+CFLAGS=-mmcu=$(DEVICE_CC) -Os -Wall -g -DF_CPU=16000000UL -Wno-deprecated-declarations -D__PROG_TYPES_COMPAT__
 
 MYNAME=avr-cobalt-panel
 
