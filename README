@@ -76,6 +76,8 @@ The keys pressed on the front-panel are returned as:
 	The sunken button that can only be reached with a *PIN* is
 	returned as the character 'P'.
 
- 
-
+Depending on desired use, you may want to disable the Arduino's auto reset 
+on serial connect: http://playground.arduino.cc/Main/DisablingAutoResetOnSerialConnection
+I added a 100uf capacitor between reset and ground and it worked. This allowed 
+sending commands through echo (without it resetting).
 
